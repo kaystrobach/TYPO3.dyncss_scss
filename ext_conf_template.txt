@@ -1,0 +1,2 @@
+# cat=basic; type=options[php=php,compass=compass]; label=compile using compass or using a native php parser
+parser = php
