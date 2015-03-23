@@ -1,6 +1,6 @@
 <?php
 
-class tx_DyncssScss_Parser extends \KayStrobach\DynCss\Parser\AbstractParser{
+class tx_DyncssScss_Parser extends \KayStrobach\Dyncss\Parser\AbstractParser{
 	function __construct() {
 		// ensure no one else has loaded lessc already ;)
 		if(!class_exists('scssc')) {
