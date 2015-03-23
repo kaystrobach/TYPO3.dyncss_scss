@@ -7,7 +7,7 @@ class tx_DyncssScss_Parser extends \KayStrobach\Dyncss\Parser\AbstractParser{
 			include_once(t3lib_extMgm::extPath('dyncss_scss') . 'Resources/Private/Php/scss/scss.inc.php');
 		}
 		// build instance to usage
-		$this->parser = new scssc();
+		$this->parser = new \Leafo\ScssPhp\Compiler();
 	}
 	/**
 	 * @param $string
