@@ -3,11 +3,11 @@
 class tx_DyncssScss_Parser extends \KayStrobach\Dyncss\Parser\AbstractParser{
 	function __construct() {
 		// ensure no one else has loaded lessc already ;)
-		if(!class_exists('scssc')) {
+		if(!class_exists('\Leafo\ScssPhp\Compiler')) {
 			include_once(t3lib_extMgm::extPath('dyncss_scss') . 'Resources/Private/Php/scss/scss.inc.php');
 		}
 		// build instance to usage
-		$this->parser = new scssc();
+		$this->parser = new \Leafo\ScssPhp\Compiler();
 	}
 	/**
 	 * @param $string
