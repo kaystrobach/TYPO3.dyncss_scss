@@ -23,19 +23,6 @@ class tx_DyncssScss_Parser extends \KayStrobach\Dyncss\Parser\AbstractParser{
 	 * @return mixed
 	 */
 	protected function _prepareCompile($string) {
-		/**
-		 * Change the initial value of a less constant before compiling the file
-		 */
-		if(is_array($this->overrides)) {
-			foreach($this->overrides as $key => $value) {
-				$string = preg_replace(
-					'/\$' . $key . ':(.*);/U',
-					 '\$' . $key . ': ' . $value . ';',
-					 $string,
-					 1
-				);
-			}
-		}
 		return $string;
 	}
 
@@ -46,6 +33,7 @@ class tx_DyncssScss_Parser extends \KayStrobach\Dyncss\Parser\AbstractParser{
 	 */
 	protected function _compileFile($inputFilename, $preparedFilename, $outputFilename, $cacheFilename) {
 		try {
+			$this->parser->setVariables($this->overrides);
 			$this->parser->setImportPaths(array(dirname($inputFilename), dirname($preparedFilename)));
 			return $this->parser->compile('@import "' . basename($preparedFilename) . '"');
 		} catch(Exception $e) {
