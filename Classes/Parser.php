@@ -39,6 +39,12 @@ class tx_DyncssScss_Parser extends \KayStrobach\Dyncss\Parser\AbstractParser{
 		} catch(Exception $e) {
 			return $e;
 		}
+	}
 
+	/**
+	 * @return string
+	 */
+	public function getVersion() {
+		return \Leafo\ScssPhp\Version::VERSION;
 	}
 }
