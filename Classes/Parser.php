@@ -1,6 +1,9 @@
 <?php
 
-class tx_DyncssScss_Parser extends \KayStrobach\Dyncss\Parser\AbstractParser{
+namespace KayStrobach\DyncssScss\Parser;
+
+
+class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser{
 	function __construct() {
 		// ensure no one else has loaded lessc already ;)
 		if(!class_exists('\Leafo\ScssPhp\Compiler')) {
@@ -46,5 +49,21 @@ class tx_DyncssScss_Parser extends \KayStrobach\Dyncss\Parser\AbstractParser{
 	 */
 	public function getVersion() {
 		return \Leafo\ScssPhp\Version::VERSION;
+	}
+
+	/**
+	 * returns the homepage of the parser
+	 * @return string
+	 */
+	public function getParserHomepage() {
+		return 'http://leafo.github.io/scssphp';
+	}
+
+	/**
+	 * return readable name of the project
+	 * @return string
+	 */
+	public function getParserName() {
+		return 'scssphp';
 	}
 }

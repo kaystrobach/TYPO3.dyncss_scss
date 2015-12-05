@@ -1,3 +1,3 @@
 <?php
 
-\KayStrobach\Dyncss\Configuration\BeRegistry::get()->registerFileHandler('scss', 'tx_DyncssScss_Parser');
+\KayStrobach\Dyncss\Configuration\BeRegistry::get()->registerFileHandler('scss', 'KayStrobach\DyncssScss\Parser\ScssParser');
