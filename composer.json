@@ -1,5 +1,5 @@
 {
-  "name": "kaystrobach/dyncss_css",
+  "name": "kaystrobach/dyncss_scss",
   "description": "Compile your CSS dynamically with DynCss Adapters.",
   "type": "typo3-cms-extension",
   "version": "1.0.5",
