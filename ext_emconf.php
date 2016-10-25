@@ -12,10 +12,10 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'DynCss - SCSS Parser',
-	'description' => 'DynCss-Parser',
+	'description' => 'DynCss-Parser (Powered by Leafo scssphp 0.6.6)',
 	'category' => 'fe',
 	'shy' => 0,
-	'version' => '1.0.4',
+	'version' => '1.0.5',
 	'dependencies' => 'dyncss',
 	'conflicts' => '',
 	'priority' => '',
