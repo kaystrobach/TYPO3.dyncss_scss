@@ -8,7 +8,7 @@
     "typo3/cms-core": ">=6.2.0,<8.0"
   },
   "require-dev": {
-    "typo3/cms": "^7.6“,
+    "typo3/cms": "^7.6",
     "leafo/scssphp": "^0.6.0"
   },
   "replace": {
