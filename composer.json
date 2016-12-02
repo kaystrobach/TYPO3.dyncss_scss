@@ -9,11 +9,12 @@
   },
   "require-dev": {
     "typo3/cms": "^7.6",
-    "leafo/scssphp": "^0.6.0"
+    "leafo/scssphp": "^0.6.0",
+    "kaystrobach/dyncss": "^0.7.0"
   },
   "replace": {
     "dyncss_scss": "self.version",
-    "typo3-ter/dyncss_scss": "self.version"
+    "typo3-ter/dyncss_scss": "self.version",
   },
   "autoload": {
     "psr-4": {
