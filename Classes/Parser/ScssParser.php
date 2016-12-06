@@ -6,8 +6,9 @@ class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser
 {
     public function __construct()
     {
+        parent::__construct();
         // ensure no one else has loaded lessc already ;)
-        if (!defined('TYPO3_COMPOSER_MODE') && !TYPO3_COMPOSER_MODE) {
+        if (!defined('TYPO3_COMPOSER_MODE') || !TYPO3_COMPOSER_MODE) {
             if (!class_exists('\Leafo\ScssPhp\Compiler')) {
                 include_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('dyncss_scss') . 'Resources/Private/Php/scss/scss.inc.php');
             }
