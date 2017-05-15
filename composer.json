@@ -9,7 +9,7 @@
     "kaystrobach/dyncss": "^0.8.0"
   },
   "require-dev": {
-    "typo3/cms": "^8.6"
+    "typo3/cms": "^8.7"
   },
   "replace": {
     "dyncss_scss": "self.version",
