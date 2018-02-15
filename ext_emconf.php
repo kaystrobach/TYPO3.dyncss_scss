@@ -11,11 +11,11 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-    'title' => 'DynCss - SCSS Parser',
+    'title' => 'DynCss - SCSS Parser (based on Leafo SCSS-Parser v0.7.5)',
     'description' => 'DynCss-Parser',
     'category' => 'fe',
     'shy' => 0,
-    'version' => '1.1.1',
+    'version' => '1.2.0',
     'dependencies' => 'dyncss',
     'conflicts' => '',
     'priority' => '',
