@@ -2,6 +2,8 @@
 
 namespace KayStrobach\DyncssScss\Parser;
 
+use KayStrobach\Dyncss\Utilities\ApplicationContext;
+
 class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser
 {
     public function __construct()
@@ -45,6 +47,16 @@ class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser
         try {
             $this->parser->setVariables($this->overrides);
             $this->parser->setImportPaths(array(dirname($inputFilename), dirname($preparedFilename)));
+            if (ApplicationContext::isDevelopmentModeActive() || $this->config['enableDebugMode'] === '1') {
+                $this->parser->setSourceMap(\Leafo\ScssPhp\Compiler::SOURCE_MAP_FILE);
+                $this->parser->setSourceMapOptions(array(
+                    'sourceMapWriteTo'  => $preparedFilename . ".map",
+                    'sourceMapURL'      => '/' . str_replace(PATH_site, '', $preparedFilename) . ".map",
+                    'sourceMapFilename' => '/'  . $preparedFilename,  // url location of .css file
+                    'sourceMapBasepath' => PATH_site,  // difference between file & url locations, removed from ALL source files in .map
+                    'sourceRoot'        => '/',
+                ));
+            }
             return $this->parser->compile('@import "' . basename($preparedFilename) . '"');
         } catch (Exception $e) {
             return $e;
