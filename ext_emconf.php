@@ -10,7 +10,7 @@
 # writing. "version" and "dependencies" must not be touched!
 ########################################################################
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF['dyncss_scss'] = array(
     'title' => 'DynCss - SCSS Parser (based on Leafo SCSS-Parser v0.7.5)',
     'description' => 'DynCss-Parser',
     'category' => 'fe',
