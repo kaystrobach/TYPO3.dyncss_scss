@@ -1,6 +1,7 @@
 <?php
 
 namespace KayStrobach\DyncssScss\Parser;
+use Exception;
 
 class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser
 {
@@ -9,12 +10,12 @@ class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser
         parent::__construct();
         // ensure no one else has loaded lessc already ;)
         if (!defined('TYPO3_COMPOSER_MODE') || !TYPO3_COMPOSER_MODE) {
-            if (!class_exists('\Leafo\ScssPhp\Compiler')) {
-                include_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('dyncss_scss') . 'Resources/Private/Php/scss/scss.inc.php');
+            if (!class_exists('\ScssPhp\ScssPhp\Compiler')) {
+                include_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('dyncss_scss') . 'Resources/Private/Php/scssphp/scss.inc.php');
             }
         }
         // build instance to usage
-        $this->parser = new \Leafo\ScssPhp\Compiler();
+        $this->parser = new \ScssPhp\ScssPhp\Compiler();
     }
     /**
      * @param $string
@@ -56,7 +57,7 @@ class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser
      */
     public function getVersion()
     {
-        return \Leafo\ScssPhp\Version::VERSION;
+        return \ScssPhp\ScssPhp\Version::VERSION;
     }
 
     /**
@@ -65,7 +66,7 @@ class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser
      */
     public function getParserHomepage()
     {
-        return 'http://leafo.github.io/scssphp';
+        return 'https://scssphp.github.io/scssphp/';
     }
 
     /**
