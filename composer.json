@@ -6,7 +6,7 @@
   "require": {
     "typo3/cms-core": ">=7.6.15 || ^8.7 || ^9.5",
     "leafo/scssphp": "^0.7.4",
-    "kaystrobach/dyncss": "^0.8.0"
+    "kaystrobach/dyncss": "^0.9.0"
   },
   "replace": {
     "dyncss_scss": "self.version",
