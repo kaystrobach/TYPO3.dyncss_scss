@@ -4,9 +4,9 @@
   "type": "typo3-cms-extension",
   "license": "GPL-2.0+",
   "require": {
-    "typo3/cms-core": ">=7.6.15 || ^8.7 || ^9.5",
-    "leafo/scssphp": "^0.7.4",
-    "kaystrobach/dyncss": "^0.9.0"
+    "typo3/cms-core": ">=9.5.0,<10.5",
+    "scssphp/scssphp": "^1.0.8",
+    "kaystrobach/dyncss": "^1.0.0"
   },
   "replace": {
     "dyncss_scss": "self.version",
