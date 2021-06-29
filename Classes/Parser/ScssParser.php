@@ -1,6 +1,7 @@
 <?php
 
 namespace KayStrobach\DyncssScss\Parser;
+
 use Exception;
 
 class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser
