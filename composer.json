@@ -1,10 +1,10 @@
 {
-  "name": "kaystrobach/dyncss_scss",
+  "name": "kaystrobach/dyncss-scss",
   "description": "Compile your CSS dynamically with DynCss Adapters.",
   "type": "typo3-cms-extension",
   "license": "GPL-2.0+",
   "require": {
-    "typo3/cms-core": ">=9.5.0,<10.5",
+    "typo3/cms-core": ">=9.5.0,<11.6",
     "scssphp/scssphp": "^1.0.8",
     "kaystrobach/dyncss": "^1.0.0"
   },
@@ -16,7 +16,9 @@
       "KayStrobach\\DyncssScss\\": "Classes/"
     }
   },
-  "keywords": ["dyncss"],
+  "keywords": [
+    "dyncss"
+  ],
   "homepage": "http://donate.kay-strobach.de/",
   "extra": {
     "typo3/cms": {

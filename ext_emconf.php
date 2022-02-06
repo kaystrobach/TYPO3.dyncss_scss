@@ -27,7 +27,7 @@ $EM_CONF['dyncss_scss'] = [
     'constraints' => [
         'depends' => [
             'dyncss' => '1.0.0-1.99.99',
-            'typo3' => '9.5.0-10.4.99'
+            'typo3' => '9.5.0-11.5.99'
         ],
         'conflicts' => [
         ],
