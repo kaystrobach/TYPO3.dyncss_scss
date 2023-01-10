@@ -6,7 +6,7 @@
   "require": {
     "typo3/cms-core": ">=9.5.0,<11.6",
     "scssphp/scssphp": "^1.0.8",
-    "kaystrobach/dyncss": "^1.0.0"
+    "kaystrobach/dyncss": "^1.0.0 || dev-typo3-11"
   },
   "replace": {
     "typo3-ter/dyncss_scss": "self.version"
