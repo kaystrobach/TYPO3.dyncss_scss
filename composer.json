@@ -3,6 +3,7 @@
   "description": "Compile your CSS dynamically with DynCss Adapters.",
   "type": "typo3-cms-extension",
   "license": "GPL-2.0+",
+  "minimum-stability": "alpha",
   "repositories": [
     { "type": "composer", "url": "https://composer.typo3.org/" },
     { "type": "git", "url": "git@github.com:rooxie/TYPO3.dyncss.git"}
