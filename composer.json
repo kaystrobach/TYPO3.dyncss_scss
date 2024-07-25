@@ -3,10 +3,16 @@
   "description": "Compile your CSS dynamically with DynCss Adapters.",
   "type": "typo3-cms-extension",
   "license": "GPL-2.0+",
+  "minimum-stability": "alpha",
+  "repositories": [
+    { "type": "composer", "url": "https://composer.typo3.org/" },
+    { "type": "git", "url": "git@github.com:rooxie/TYPO3.dyncss.git"}
+  ],
   "require": {
-    "typo3/cms-core": ">=9.5.0,<11.6",
+    "typo3/cms-core": "^12.0",
     "scssphp/scssphp": "^1.0.8",
-    "kaystrobach/dyncss": "^1.0.0 || dev-typo3-11"
+    "kaystrobach/dyncss": "dev-typo3-12",
+    "php": ">=8.1"
   },
   "replace": {
     "typo3-ter/dyncss_scss": "self.version"
@@ -25,6 +31,12 @@
       "cms-package-dir": "{$vendor-dir}/typo3/cms",
       "web-dir": ".Build/Web",
       "extension-key": "dyncss_scss"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true
     }
   }
 }
