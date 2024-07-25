@@ -26,8 +26,7 @@ $EM_CONF['dyncss_scss'] = [
     'CGLcompliance_note' => '',
     'constraints' => [
         'depends' => [
-            'dyncss' => '1.0.0-1.99.99',
-            'typo3' => '9.5.0-11.5.99'
+            'typo3' => '12.0.0-12.4.99',
         ],
         'conflicts' => [
         ],
