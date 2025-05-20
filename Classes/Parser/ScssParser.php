@@ -6,6 +6,12 @@ use Exception;
 
 class ScssParser extends \KayStrobach\Dyncss\Parser\AbstractParser
 {
+
+    /**
+     * @var \ScssPhp\ScssPhp\Compiler
+     */
+    protected $parser;
+
     public function __construct()
     {
         parent::__construct();
