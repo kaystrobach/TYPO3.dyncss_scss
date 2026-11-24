@@ -4,8 +4,8 @@
   "type": "typo3-cms-extension",
   "license": "GPL-2.0+",
   "require": {
-    "typo3/cms-core": "^9.5.0 || ^10.5 || ^11.5 || ^12.4",
-    "scssphp/scssphp": "^1.0.8",
+    "typo3/cms-core": "^12.4 || ^13.4 || ^14.0",
+    "scssphp/scssphp": "^1.10 || ^2.0",
     "kaystrobach/dyncss": "^1.0.0"
   },
   "replace": {
@@ -22,7 +22,11 @@
     "typo3/cms": {
       "cms-package-dir": "{$vendor-dir}/typo3/cms",
       "web-dir": ".Build/Web",
-      "extension-key": "dyncss_scss"
+      "extension-key": "dyncss_scss",
+      "version": "2.0.0",
+      "Package": {
+        "providesPackages": {}
+      }
     }
   }
 }

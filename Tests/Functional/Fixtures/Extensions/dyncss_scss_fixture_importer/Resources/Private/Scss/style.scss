@@ -1,0 +1,13 @@
+// imports written for typo3conf/ext/ (all extensions side by side): file and partial without file ending
+@import "../../../../dyncss_scss_fixture_imported/Resources/Private/Scss/variables";
+@import "../../../../dyncss_scss_fixture_imported/Resources/Private/Scss/mixins";
+// import relative to the file
+@import "local";
+
+.text {
+  color: $text-color;
+  @include rounded;
+}
+.text-light {
+  color: lighten($text-color, 20%);
+}
